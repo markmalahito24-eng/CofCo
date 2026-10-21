@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Coffee Corner</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-page">
+    <main class="auth-layout">
+
+        <section class="auth-hero signup-hero">
+            <a href="index.html" class="hero-brand">
+                <span class="brand-icon">☕</span> COFFEE CORNER
+            </a>
+
+            <div class="hero-copy">
+                <p class="eyebrow">YOUR NEW FAVORITE PLACE</p>
+                <h2>Great Coffee.<br>New Connections.</h2>
+                <p>Join our coffee community and make every cup count.</p>
+            </div>
+
+            <p class="hero-footer">Your next favorite cup is waiting.</p>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-form-wrap">
+                <a href="index.html" class="mobile-brand">
+                    ☕ Coffee Corner
+                </a>
+
+                <div class="form-heading">
+                    <span class="mini-label">JOIN OUR COMMUNITY</span>
+                    <h1>Create an account.</h1>
+                    <p>Sign up and get started with Coffee Corner.</p>
+                </div>
+
+                <form id="signupForm" novalidate>
+                    <div class="input-group">
+                        <label for="fullName">Full name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="signupEmail">Email address</label>
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="password-field">
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="At least 8 characters"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-toggle="signupPassword"
+                                aria-label="Show password"
+                            >Show</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm password</label>
+                        <div class="password-field">
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Re-enter your password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-toggle="confirmPassword"
+                                aria-label="Show password"
+                            >Show</button>
+                        </div>
+                    </div>
+
+                    <label class="check-label terms-label">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>I agree to the terms and conditions.</span>
+                    </label>
+
+                    <button type="submit" class="primary-btn">
+                        Create Account <span>→</span>
+                    </button>
+
+                    <p
+                        class="form-message"
+                        id="signupMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </form>
+
+                <div class="separator">
+                    <span>OR</span>
+                </div>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+
+                <a href="index.html" class="back-link">
+                    ← Back to home
+                </a>
+            </div>
+
+            <p class="demo-note">
+                Front-end demo · No real authentication
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

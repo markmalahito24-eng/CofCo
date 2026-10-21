@@ -1,0 +1,455 @@
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="The full Roast café menu — espresso, filter brews, pastries and all-day plates — plus our single-origin bean shop with whole-bean and ground coffee delivered fresh.">
+<meta name="theme-color" content="#221510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23221510'/%3E%3Cpath d='M11 8c-2 3-2 6 0 9M16 8c-2 3-2 6 0 9M21 8c-2 3-2 6 0 9' stroke='%23c9a27a' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M8 20h16a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4z' fill='%236f7f57'/%3E%3C/svg%3E">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== Top bar ===================== -->
+<div class="topbar d-none d-lg-block">
+  <div class="container d-flex justify-content-between align-items-center py-2">
+    <div class="d-flex align-items-center gap-3">
+    </div>
+    <div class="d-flex align-items-center gap-3">
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Navbar ===================== -->
+<header>
+<nav class="navbar navbar-expand-lg site-nav sticky-top py-2" aria-label="Primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 4c-1.6 2.4-1.6 5.6 0 8M12 4c-1.6 2.4-1.6 5.6 0 8M16 4c-1.6 2.4-1.6 5.6 0 8"/><path d="M5 15h14a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z" fill="currentColor" stroke="none"/></svg>
+      </span>
+      Coffee Corner
+    </a>
+
+    <div class="d-flex align-items-center gap-2 order-lg-2">
+      <button class="bag-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-controls="cartCanvas" aria-label="Open shopping bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="bag-count" data-bag-count aria-live="polite">0</span>
+        <span class="visually-hidden">items in bag</span>
+      </button>
+      <a href="#shop" class="btn btn-espresso d-none d-sm-inline-flex">Order now</a>
+      <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+      <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#cafe-menu">Café menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#shop">Bean shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-cta d-lg-none">
+        <a href="#shop" class="btn btn-espresso">Shop beans</a>
+        <a href="index.html#locations" class="btn btn-ghost">Visit us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main id="main">
+
+<!-- ===================== Page hero ===================== -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a><span>/</span>Menu &amp; shop</p>
+    <span class="eyebrow" style="color:var(--crema)">Eat, drink &amp; take home</span>
+    <h1 id="page-title">The full menu &amp; Coffee Corner</h1>
+    <p>Everything we pour and bake at the cafe, plus the beans we roast to take home.</p>
+  </div>
+</section>
+
+<!-- ===================== Café menu (tabs) ===================== -->
+<section class="section" id="cafe-menu" aria-labelledby="cafe-menu-title">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Café menu</span>
+      <h2 class="section-title" id="cafe-menu-title">At the counter</h2>
+    </div>
+
+    <ul class="nav menu-tabs" id="menuTabs" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-espresso" data-bs-toggle="tab" data-bs-target="#pane-espresso" type="button" role="tab" aria-controls="pane-espresso" aria-selected="true">Espresso</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" id="tab-brews" data-bs-toggle="tab" data-bs-target="#pane-brews" type="button" role="tab" aria-controls="pane-brews" aria-selected="false">Filter &amp; cold</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" id="tab-notcoffee" data-bs-toggle="tab" data-bs-target="#pane-notcoffee" type="button" role="tab" aria-controls="pane-notcoffee" aria-selected="false">Not coffee</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" id="tab-food" data-bs-toggle="tab" data-bs-target="#pane-food" type="button" role="tab" aria-controls="pane-food" aria-selected="false">Kitchen</button></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Espresso pane -->
+     <div class="tab-pane fade show active" id="pane-espresso" role="tabpanel" aria-labelledby="tab-espresso">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-5">
+            <p class="menu-note">Pulled on local Liberica &amp; Arabica beans — rich notes of dark chocolate and muscovado. Condensed milk, oat &amp; whole milk options available.</p>
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Kapeng Barako</span><span class="mi-dots"></span><span class="mi-price">₱160</span></div>
+              <div class="menu-item"><span class="mi-name">Americano</span><span class="mi-dots"></span><span class="mi-price">₱180</span></div>
+              <div class="menu-item"><span class="mi-name">Spanish Latte</span><span class="mi-tag">bestseller</span><span class="mi-dots"></span><span class="mi-price">₱250</span></div>
+              <div class="menu-item"><span class="mi-name">Kape Kastila</span><span class="mi-dots"></span><span class="mi-price">₱260</span></div>
+              <div class="menu-item"><span class="mi-name">Tablea Mocha</span><span class="mi-tag">Batangas</span><span class="mi-dots"></span><span class="mi-price">₱280</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Flat white</span><span class="mi-dots"></span><span class="mi-price">₱280</span></div>
+              <div class="menu-item"><span class="mi-name">Cappuccino</span><span class="mi-dots"></span><span class="mi-price">₱290</span></div>
+              <div class="menu-item"><span class="mi-name">Caramel Latte</span><span class="mi-dots"></span><span class="mi-price">₱290</span></div>
+              <div class="menu-item"><span class="mi-name">Ube Latte</span><span class="mi-dots"></span><span class="mi-price">₱300</span></div>
+              <div class="menu-item"><span class="mi-name">Affogato</span><span class="mi-tag">local gelato</span><span class="mi-dots"></span><span class="mi-price">₱320</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brews pane -->
+     <div class="tab-pane fade" id="pane-brews" role="tabpanel" aria-labelledby="tab-brews">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-5">
+            <p class="menu-note">Featuring single-origin Philippine Arabica from Sagada &amp; Mt. Apo rotating weekly. Ask what's dialled in today.</p>
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Barako drip</span><span class="mi-dots"></span><span class="mi-price">₱160</span><span class="mi-desc">Free refill before 9am</span></div>
+              <div class="menu-item"><span class="mi-name">Sagada V60</span><span class="mi-tag">single origin</span><span class="mi-dots"></span><span class="mi-price">₱280</span></div>
+              <div class="menu-item"><span class="mi-name">Mt. Apo Chemex, for two</span><span class="mi-dots"></span><span class="mi-price">₱480</span></div>
+              <div class="menu-item"><span class="mi-name">AeroPress</span><span class="mi-dots"></span><span class="mi-price">₱260</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Cold brew</span><span class="mi-dots"></span><span class="mi-price">₱250</span></div>
+              <div class="menu-item"><span class="mi-name">Nitro cold brew</span><span class="mi-tag">seasonal</span><span class="mi-dots"></span><span class="mi-price">₱290</span></div>
+              <div class="menu-item"><span class="mi-name">Calamansi iced</span><span class="mi-dots"></span><span class="mi-price">₱240</span></div>
+              <div class="menu-item"><span class="mi-name">Espresso tonic</span><span class="mi-dots"></span><span class="mi-price">₱270</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Not coffee pane -->
+      <div class="tab-pane fade" id="pane-notcoffee" role="tabpanel" aria-labelledby="tab-notcoffee">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-5">
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Sampaguita tea</span><span class="mi-dots"></span><span class="mi-price">₱210</span><span class="mi-desc">Sampaguita jasmine · Lemongrass · Pandan · Peppermint</span></div>
+              <div class="menu-item"><span class="mi-name">Ube milk tea</span><span class="mi-tag">house blend</span><span class="mi-dots"></span><span class="mi-price">₱250</span></div>
+              <div class="menu-item"><span class="mi-name">Matcha latte</span><span class="mi-dots"></span><span class="mi-price">₱280</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Batangas Tablea Hot Chocolate</span><span class="mi-tag">70% cacao</span><span class="mi-dots"></span><span class="mi-price">₱240</span></div>
+              <div class="menu-item"><span class="mi-name">Golden turmeric latte</span><span class="mi-dots"></span><span class="mi-price">₱260</span></div>
+              <div class="menu-item"><span class="mi-name">Calamansi-pandan soda</span><span class="mi-dots"></span><span class="mi-price">₱220</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food pane -->
+      <div class="tab-pane fade" id="pane-food" role="tabpanel" aria-labelledby="tab-food">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-5">
+            <h3 class="menu-col-title"><span class="ico" aria-hidden="true">◓</span> Bakery</h3>
+            <p class="menu-note">Baked fresh daily in Santa Cruz. GF = gluten-free.</p>
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Ube ensaymada</span><span class="mi-dots"></span><span class="mi-price">₱140</span></div>
+              <div class="menu-item"><span class="mi-name">Cheese pandesal</span><span class="mi-dots"></span><span class="mi-price">₱90</span></div>
+              <div class="menu-item"><span class="mi-name">Cinnamon roll</span><span class="mi-dots"></span><span class="mi-price">₱180</span></div>
+              <div class="menu-item"><span class="mi-name">Banana bread</span><span class="mi-tag">GF</span><span class="mi-dots"></span><span class="mi-price">₱160</span></div>
+              <div class="menu-item"><span class="mi-name">Tablea brownie</span><span class="mi-dots"></span><span class="mi-price">₱150</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <h3 class="menu-col-title"><span class="ico" aria-hidden="true">◒</span> All-day plates</h3>
+            <p class="menu-note">Served until 2pm. Add a Barako drip coffee for ₱100.</p>
+            <div class="menu-item-wrap">
+              <div class="menu-item"><span class="mi-name">Pandesal &amp; jam</span><span class="mi-dots"></span><span class="mi-price">₱120</span></div>
+              <div class="menu-item"><span class="mi-name">Longganisa roll</span><span class="mi-dots"></span><span class="mi-price">₱220</span></div>
+              <div class="menu-item"><span class="mi-name">Avocado &amp; kesong puti toast</span><span class="mi-tag">v</span><span class="mi-dots"></span><span class="mi-price">₱280</span></div>
+              <div class="menu-item"><span class="mi-name">Mango chia bowl</span><span class="mi-tag">GF</span><span class="mi-dots"></span><span class="mi-price">₱240</span></div>
+              <div class="menu-item"><span class="mi-name">Tocino &amp; egg brioche</span><span class="mi-dots"></span><span class="mi-price">₱260</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Filter Chips -->
+<section class="section menu-band" id="visual-menu" aria-labelledby="visual-menu-title">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4 reveal">
+      <div class="section-head">
+        <span class="eyebrow">Visual menu</span>
+        <h2 class="section-title" id="visual-menu-title">Signatures &amp; Bites</h2>
+        <p class="lead-txt">Explore our most popular specialty local brews, house drinks, and freshly baked pastries from Santa Cruz.</p>
+      </div>
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="shop-filters mb-5 reveal" role="group" aria-label="Filter menu items">
+      <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">All items</button>
+      <button class="filter-chip" type="button" data-filter="drinks" aria-pressed="false">Coffees &amp; Drinks</button>
+      <button class="filter-chip" type="button" data-filter="food" aria-pressed="false">Bakery &amp; Plates</button>
+    </div>
+
+    <div class="row g-4">
+      <!-- Item 1: Spanish Latte -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="drinks">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Iced Spanish Latte with layered milk and espresso" width="420" height="420" loading="lazy">
+            <span class="pill">Bestseller</span>
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">Espresso Bar</div>
+            <h3 class="bean-name">Spanish Latte</h3>
+            <p class="bean-notes"><strong>Rich espresso · sweetened condensed milk · fresh milk.</strong> Smooth, sweet, and incredibly creamy.</p>
+            <div class="bean-meta">
+              <div class="bean-price">₱250</div>
+              <span class="roast-label">Hot or Iced</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="spanish-latte" data-name="Spanish Latte" data-price="250" data-img="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" data-meta="Signature Drink" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Item 2: Tablea Mocha -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="drinks">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80" alt="Mocha coffee topped with art" width="420" height="420" loading="lazy">
+            <span class="pill pill-crema">Batangas Cacao</span>
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">Specialty Drink</div>
+            <h3 class="bean-name">Tablea Mocha</h3>
+            <p class="bean-notes"><strong>Artisanal Batangas cacao tablets · espresso · steamed milk.</strong> Earthy, rich, and deeply comforting.</p>
+            <div class="bean-meta">
+              <div class="bean-price">₱280</div>
+              <span class="roast-label">Local Cacao</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="tablea-mocha" data-name="Tablea Mocha" data-price="280" data-img="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80" data-meta="Signature Drink" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Item 3: Ube Latte -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="drinks">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80" alt="Creamy latte drink" width="420" height="420" loading="lazy">
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">Signature Creation</div>
+            <h3 class="bean-name">Ube Latte</h3>
+            <p class="bean-notes"><strong>Real purple yam paste · espresso · velvety milk.</strong> Sweet, nutty, and visually stunning.</p>
+            <div class="bean-meta">
+              <div class="bean-price">₱300</div>
+              <span class="roast-label">Hot or Iced</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="ube-latte" data-name="Ube Latte" data-price="300" data-img="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80" data-meta="Signature Drink" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Item 4: Ube Ensaymada -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="food">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Fresh baked pastry pastry roll" width="420" height="420" loading="lazy">
+            <span class="pill">Freshly Baked</span>
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">Bakery</div>
+            <h3 class="bean-name">Ube Ensaymada</h3>
+            <p class="bean-notes"><strong>Soft brioche dough · ube halaya filling · Edam cheese.</strong> Sweet, buttery, and baked fresh daily.</p>
+            <div class="bean-meta">
+              <div class="bean-price">₱140</div>
+              <span class="roast-label">Pastry</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="ube-ensaymada" data-name="Ube Ensaymada" data-price="140" data-img="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" data-meta="Bakery Item" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Item 5: Longganisa Brioche Roll -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="food">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80" alt="Savory brioche sandwich roll" width="420" height="420" loading="lazy">
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">All-Day Plates</div>
+            <h3 class="bean-name">Longganisa Roll</h3>
+            <p class="bean-notes"><strong>Sweet garlic longganisa patty · fried egg · garlic mayo in a toasted brioche bun.</strong></p>
+            <div class="bean-meta">
+              <div class="bean-price">₱220</div>
+              <span class="roast-label">Breakfast Plate</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="longganisa-roll" data-name="Longganisa Roll" data-price="220" data-img="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80" data-meta="All-Day Plate" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Item 6: Mango Chia Bowl -->
+      <div class="col-sm-6 col-lg-4" data-filter-col>
+        <article class="bean-card" data-category="food">
+          <div class="bean-thumb">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Healthy fresh fruit bowl" width="420" height="420" loading="lazy">
+            <span class="pill pill-crema">GF</span>
+          </div>
+          <div class="bean-body">
+            <div class="bean-origin">All-Day Plates</div>
+            <h3 class="bean-name">Mango Chia Bowl</h3>
+            <p class="bean-notes"><strong>Coconut chia pudding · fresh sweet Philippine mangoes · toasted coconut flakes.</strong></p>
+            <div class="bean-meta">
+              <div class="bean-price">₱240</div>
+              <span class="roast-label">Gluten-Free</span>
+            </div>
+            <button class="add-bag" type="button" data-add-bag data-id="mango-bowl" data-name="Mango Chia Bowl" data-price="240" data-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" data-meta="All-Day Plate" data-label="Add to order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Add to order
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll("#visual-menu .filter-chip");
+    const menuCards = document.querySelectorAll("#visual-menu [data-filter-col]");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-pressed", "false");
+        });
+        this.classList.add("active");
+        this.setAttribute("aria-pressed", "true");
+
+        const filterValue = this.getAttribute("data-filter");
+
+        menuCards.forEach(cardCol => {
+          const article = cardCol.querySelector(".bean-card");
+          const category = article.getAttribute("data-category");
+
+          if (filterValue === "all" || category === filterValue) {
+            cardCol.style.display = "";
+          } else {
+            cardCol.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <span class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 4c-1.6 2.4-1.6 5.6 0 8M12 4c-1.6 2.4-1.6 5.6 0 8M16 4c-1.6 2.4-1.6 5.6 0 8"/><path d="M5 15h14a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z" fill="currentColor" stroke="none"/></svg>
+          </span>
+          Roast
+        </span>
+        <p style="max-width:34ch">Small-batch specialty coffee, roasted on Kiln Street and poured across two neighbourhood cafés.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Roast on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Roast on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.6-1.5H17V.2C16.7.1 15.6 0 14.4 0 11.9 0 10 1.5 10 4.3V6H7v3h3v9h4z"/></svg></a>
+          <a href="#" aria-label="Roast on X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L22 21h-5.9l-4.2-5.5L6.9 21H3.8l7-8L2.5 3h6l3.8 5zM16.4 19.2h1.7L7.7 4.7H5.9z"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Explore</h5>
+        <ul class="footer-list">
+          <li><a href="index.html#story">Our story</a></li>
+          <li><a href="#cafe-menu">Café menu</a></li>
+          <li><a href="#shop">Shop beans</a></li>
+          <li><a href="index.html#subscription">Subscription</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Visit</h5>
+        <ul class="footer-list">
+          <li><a href="index.html#locations">Kiln Street</a></li>
+          <li><a href="index.html#locations">Riverside</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="#shop">Bean shop</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Kiln Street roastery</h5>
+        <ul class="footer-list">
+          <li>48 Kiln Street, Portland OR</li>
+          <li><a href="tel:+15035550148">(503) 555-0148</a></li>
+          <li><a href="mailto:hello@roastcoffee.example">hello@roastcoffee.example</a></li>
+          <li>Mon–Fri 7:00–18:00 · Sat 8:00–17:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Roast Coffee Co. All rights reserved.</span>
+      <span>Built with Bootstrap 5 · Template by <a href="https://uicookies.com/">uiCookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== Cart offcanvas ===================== -->
+<div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel">
+  <div class="offcanvas-header border-bottom" style="border-color:var(--line)!important">
+    <h2 class="h5 m-0" id="cartCanvasLabel" style="font-family:var(--display);color:var(--coffee)">Your bag</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close bag"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div data-bag-lines class="flex-grow-1"></div>
+    <div class="border-top pt-3" style="border-color:var(--line)!important">
+      <div class="cart-total"><span>Subtotal</span><span class="amt" data-bag-total>₱0.00</span></div>
+      <p class="small text-mocha mb-2">Shipping &amp; taxes calculated at checkout. Free shipping over ₱800.</p>
+      <button class="btn btn-espresso w-100 btn-lg" data-bag-checkout disabled>Checkout</button>
+      <button class="btn btn-ghost w-100 mt-2" data-bs-dismiss="offcanvas">Keep shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Toast ===================== -->
+<div class="toast-note" id="roastToast" role="status" aria-live="polite">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  <div><div class="tn-title">Added</div><div class="tn-sub">to your bag</div></div>
+</div>
+
+<script src="js/vendor/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
